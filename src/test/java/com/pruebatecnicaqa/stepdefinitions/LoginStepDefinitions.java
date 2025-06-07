@@ -4,9 +4,9 @@ import com.pruebatecnicaqa.models.Credentials;
 import com.pruebatecnicaqa.questions.LoginErrorMessage;
 import com.pruebatecnicaqa.tasks.LoginTask;
 import io.cucumber.java.Before;
-import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Cuando;
-import io.cucumber.java.es.Entonces;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -25,18 +25,18 @@ public class LoginStepDefinitions {
         actor.can(BrowseTheWeb.with(WebDriverManager.chromedriver().create()));
     }
 
-    @Dado("que el usuario está en la página de login de Sauce Demo")
+    @Given("que el usuario está en la página de login de Sauce Demo")
     public void userIsOnLoginPage() {
         // La URL se abre en la tarea de login
     }
 
-    @Cuando("ingresa el usuario {string} y la contraseña {string}")
+    @When("ingresa el usuario {string} y la contraseña {string}")
     public void enterCredentials(String username, String password) {
         Credentials credentials = new Credentials(username, password);
         actor.attemptsTo(LoginTask.withCredentials(credentials));
     }
 
-    @Entonces("debería ver la página principal de productos")
+    @Then("debería ver la página principal de productos")
     public void shouldSeeProductsPage() {
         actor.attemptsTo(
             Ensure.that(TheWebPage.currentUrl())
@@ -44,7 +44,7 @@ public class LoginStepDefinitions {
         );
     }
 
-    @Entonces("debería ver un mensaje de error de credenciales inválidas")
+    @Then("debería ver un mensaje de error de credenciales inválidas")
     public void shouldSeeErrorMessage() {
         actor.attemptsTo(
             Ensure.that(LoginErrorMessage.value())
