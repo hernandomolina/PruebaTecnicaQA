@@ -1,2 +1,7 @@
-com\pruebatecnicaqa\stepdefinitions\LoginStepDefinitions.class
+com\pruebatecnicaqa\runners\CartTestRunner.class
+com\pruebatecnicaqa\stepdefinitions\CheckoutStepDefinitions.class
 com\pruebatecnicaqa\runners\LoginTestRunner.class
+com\pruebatecnicaqa\stepdefinitions\CartStepDefinitions.class
+com\pruebatecnicaqa\stepdefinitions\Hooks.class
+com\pruebatecnicaqa\stepdefinitions\LoginStepDefinitions.class
+com\pruebatecnicaqa\runners\RegressionTestRunner.class

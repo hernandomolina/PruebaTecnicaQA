@@ -17,7 +17,4 @@ public class LoginPage {
     
     public static final Target ERROR_MESSAGE = Target.the("error message")
             .located(By.cssSelector("[data-test='error']"));
-
-    public static final Target INVENTORY_CONTAINER = Target.the("inventory container")
-            .located(By.id("inventory_container"));
 } 

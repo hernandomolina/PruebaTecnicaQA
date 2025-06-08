@@ -10,17 +10,24 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 
 import static com.pruebatecnicaqa.userinterfaces.LoginPage.*;
+import static com.pruebatecnicaqa.userinterfaces.ProductsPage.INVENTORY_CONTAINER;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class LoginTask implements Task {
     private final Credentials credentials;
+    private final boolean expectSuccess;
 
-    public LoginTask(Credentials credentials) {
+    public LoginTask(Credentials credentials, boolean expectSuccess) {
         this.credentials = credentials;
+        this.expectSuccess = expectSuccess;
     }
 
     public static LoginTask withCredentials(Credentials credentials) {
-        return instrumented(LoginTask.class, credentials);
+        return instrumented(LoginTask.class, credentials, true);
+    }
+
+    public static LoginTask withInvalidCredentials(Credentials credentials) {
+        return instrumented(LoginTask.class, credentials, false);
     }
 
     @Override
@@ -32,9 +39,11 @@ public class LoginTask implements Task {
             Click.on(LOGIN_BUTTON)
         );
 
-        if (credentials.getUsername().equals("standard_user") && credentials.getPassword().equals("secret_sauce")) {
+        // Solo verificar el contenedor de productos si esperamos un login exitoso
+        if (expectSuccess) {
             actor.attemptsTo(
-                WaitUntil.the(INVENTORY_CONTAINER, WebElementStateMatchers.isPresent()).forNoMoreThan(10).seconds()
+                WaitUntil.the(INVENTORY_CONTAINER, WebElementStateMatchers.isPresent())
+                        .forNoMoreThan(10).seconds()
             );
         }
     }

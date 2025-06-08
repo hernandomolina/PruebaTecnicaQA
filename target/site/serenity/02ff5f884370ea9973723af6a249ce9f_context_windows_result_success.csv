@@ -1,3 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login en Sauce Demo","Login exitoso en Sauce Demo","SUCCESS","2025-06-06T23:10:11.6046145-05:00[America/Bogota]","0.0","3.98"
-"Login en Sauce Demo","Login fallido con credenciales inválidas","SUCCESS","2025-06-06T23:10:15.7691833-05:00[America/Bogota]","0.0","2.5"
+"Carrito de compras en Sauce Demo","Agregar un producto al carrito","SUCCESS","2025-06-07T22:17:44.2966474-05:00[America/Bogota]","0.0","3.68"
+"Carrito de compras en Sauce Demo","Agregar múltiples productos al carrito","SUCCESS","2025-06-07T22:17:47.9964619-05:00[America/Bogota]","0.0","4.05"
+"Proceso de compra (Checkout) en Sauce Demo","Completar proceso de compra exitosamente","SUCCESS","2025-06-07T22:17:52.0721835-05:00[America/Bogota]","0.0","4.99"
+"Login en Sauce Demo","Login exitoso en Sauce Demo","SUCCESS","2025-06-07T22:17:57.082764-05:00[America/Bogota]","0.0","2.91"
+"Login en Sauce Demo","Login fallido con credenciales inválidas","SUCCESS","2025-06-07T22:17:59.9999795-05:00[America/Bogota]","0.0","2.89"
