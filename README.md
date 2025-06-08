@@ -11,17 +11,15 @@ Proyecto de automatización de pruebas para la página web [Sauce Demo](https://
 ### 1. Login
 - Login exitoso con credenciales válidas
 - Login fallido con credenciales inválidas
-- Validación de mensajes de error
 
 ### 2. Carrito de Compras
 - Agregar un producto al carrito
 - Agregar múltiples productos
-- Validación del contador del carrito
 
 ### 3. Proceso de Checkout
 - Completar proceso de compra exitosamente
-- Validación de formulario de información
-- Confirmación de orden
+
+### 4. Regresion del flujo completo
 
 ## Pre-requisitos
 - Java 11 o superior
@@ -99,18 +97,3 @@ serenity.take.screenshots=AFTER_EACH_STEP
 4. Screenshots automáticos en pasos críticos
 5. Manejo de esperas explícitas
 6. Reportes detallados con Serenity
-
-## Mejoras Futuras
-- [ ] Soporte para múltiples navegadores
-- [ ] Ejecución en paralelo
-- [ ] Integración con CI/CD
-- [ ] Pruebas de API
-- [ ] Dockerización del proyecto
-
-## Autor
-[Tu Nombre]
-
-## Notas Adicionales
-- Las pruebas están optimizadas para Chrome
-- Se incluyen pruebas de performance separadas
-- Los datos de prueba están parametrizados
